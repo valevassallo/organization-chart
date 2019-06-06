@@ -38,7 +38,7 @@ function CompanyForm({ setCompanyName }) {
     outline: none;
     border: none;
     border-bottom: 1px solid #ddd;
-    width: 400px;
+    width: 100%;
     text-align: center;
     &:focus {
       border: 1px solid red;
@@ -56,7 +56,7 @@ function CompanyForm({ setCompanyName }) {
     cursor: pointer;
     border-radius: 0.25rem;
     text-align: center;
-    width: 250px;
+    width: 50%;
   `;
 
   function handleSubmit(event) {
@@ -75,6 +75,7 @@ function CompanyForm({ setCompanyName }) {
             placeholder="Enter company's name"
             name="company"
             id="company"
+            aria-label="Input to get Company's name"
           />
         </label>
         <Submit type="submit" value="Next" />
