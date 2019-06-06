@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <CompanyForm />
+      <CompanyForm setCompanyName={setCompanyName} />
       <CEOForm />
       <Main />
     </>
