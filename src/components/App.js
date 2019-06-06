@@ -10,8 +10,6 @@ function App() {
   return (
     <>
       <CompanyForm setCompanyName={setCompanyName} />
-      <CEOForm />
-      <CompanyForm />
       <CEOForm setCeoName={setCeoName} />
       <Main />
     </>
