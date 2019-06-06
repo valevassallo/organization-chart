@@ -11,6 +11,8 @@ function App() {
     <>
       <CompanyForm setCompanyName={setCompanyName} />
       <CEOForm />
+      <CompanyForm />
+      <CEOForm setCeoName={setCeoName} />
       <Main />
     </>
   );
