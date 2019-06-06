@@ -76,6 +76,7 @@ function CompanyForm({ setCompanyName }) {
             name="company"
             id="company"
             aria-label="Input to get Company's name"
+            autoComplete="off"
           />
         </label>
         <Submit type="submit" value="Next" />
