@@ -2,7 +2,7 @@
 
 ## Team Members:
 
-- Carlos Granda
+- Cristian Granda
 - Lian Nivin
 - Valeria Vassallo
 - Marieth Perez
