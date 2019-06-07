@@ -1,22 +1,21 @@
 import React from "react";
 import CompanyForm from "./CompanyForm";
 import CEOForm from "./CEOForm";
-import CollaboratorForm from "./ColaboratorForm";
+// import CollaboratorForm from "./ColaboratorForm";
 import Main from "./Main";
 
 function App() {
   const [companyName, setCompanyName] = React.useState("");
-  const [collaboratorName, setCollaboratorName] = React.useState("");
+  // const [collaboratorName, setCollaboratorName] = React.useState("");
   const [ceoName, setCeoName] = React.useState("");
 
-  return (
-    <>
-      <CompanyForm setCompanyName={setCompanyName} />
-      <CollaboratorForm setCollaboratorName={setCollaboratorName} />
-      <CEOForm setCeoName={setCeoName} />
-      <Main />
-    </>
-  );
+  if (companyName && ceoName) {
+    return <Main companyName={companyName} ceoName={ceoName} />;
+  } else if (companyName) {
+    return <CEOForm setCeoName={setCeoName} />;
+  } else {
+    return <CompanyForm setCompanyName={setCompanyName} />;
+  }
 }
 
 export default App;
