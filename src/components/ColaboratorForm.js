@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 
 
 
-function ColaboratorForm({ setName }) {
+function CollaboratorForm({ setName }) {
 
-  const ColaboratorForm = styled.form`
+  const CollaboratorForm = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,9 +65,9 @@ function ColaboratorForm({ setName }) {
     }
   
     return (
-        <ColaboratorForm>
+        <CollaboratorForm>
           <FormInput onSubmit={handleSubmit}>
-            <Header>Enter name</Header>
+            <Header>Collaborator name</Header>
             <label htmlFor="my_user" aria-label="write your user">
             <InputName
             aria-label=""
@@ -82,7 +82,7 @@ function ColaboratorForm({ setName }) {
             value="submit"
           />
           </FormInput>
-        </ColaboratorForm>
+        </CollaboratorForm>
           
       );
 }
@@ -90,4 +90,4 @@ function ColaboratorForm({ setName }) {
   
  
 
-export default ColaboratorForm;
+export default CollaboratorForm;

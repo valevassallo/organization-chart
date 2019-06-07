@@ -1,7 +1,7 @@
 import React from "react";
 import CompanyForm from "./CompanyForm";
 import CEOForm from "./CEOForm";
-import ColaboratorForm from "./ColaboratorForm"
+import CollaboratorForm from "./ColaboratorForm"
 import Main from "./Main";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     <>
       <CompanyForm setCompanyName={setCompanyName} />
       <CEOForm />
+      <CollaboratorForm/>
       <Main />
     </>
   );
