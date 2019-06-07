@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 
 
-function CollaboratorForm({ setName }) {
+function CollaboratorForm({ setCollaboratorName }) {
 
   const CollaboratorForm = styled.form`
   display: flex;
@@ -61,20 +61,20 @@ function CollaboratorForm({ setName }) {
 
     function handleSubmit(event) {
       event.preventDefault();
-      setName(event.target.elements.company.value);
+      setCollaboratorName(event.target.elements.name.value);
     }
   
     return (
         <CollaboratorForm>
           <FormInput onSubmit={handleSubmit}>
             <Header>Collaborator name</Header>
-            <label htmlFor="my_user" aria-label="write your user">
+            <label name="name" aria-label="write your name">
             <InputName
             aria-label=""
-              id="my_user"
-              name="user"
+              id="my_name"
+              name="name"
               type="text"
-              placeholder="colaborator name"
+              placeholder="Enter colaborator name"
             />
             </label>
           <SubmitName
