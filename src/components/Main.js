@@ -1,5 +1,5 @@
 import React from "react";
-import ColaboratorBox from "./ColaboratorBox";
+import ColaboratorBox from "./CollaboratorBox";
 import styled from "@emotion/styled";
 
 const Title = styled.h1`
@@ -11,13 +11,25 @@ const Title = styled.h1`
 `;
 
 function Main({ companyName, ceoName }) {
-  const [collaboratorName, setCollaboratorName] = React.useState("");
+  const [tree, setTree] = React.useState([
+    { id: 1, name: ceoName, parentId: null }
+  ]);
+
+  function getChildren(id) {
+    return tree.filter(collaborator => collaborator.parentId === id);
+  }
+
+  function addChild(child) {
+    setTree([...tree, child]);
+  }
+
   return (
     <>
       <Title>{companyName}</Title>
       <ColaboratorBox
-        name={ceoName}
-        setCollaboratorName={setCollaboratorName}
+        collaborator={tree[0]}
+        getChildren={getChildren}
+        addChild={addChild}
       />
     </>
   );
