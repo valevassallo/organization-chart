@@ -1,16 +1,14 @@
 import React from "react";
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
-
-
-function CollaboratorForm({ setCollaboratorName }) {
-
-  const CollaboratorForm = styled.form`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;`;
+function CollaboratorForm({ setCollaboratorName, setOpenedForm }) {
+  const CollaboratorForm = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  `;
 
   const Header = styled.h1`
     text-align: center;
@@ -20,7 +18,7 @@ function CollaboratorForm({ setCollaboratorName }) {
     font-weight: bolder;
   `;
 
-    const FormInput = styled.form`
+  const FormInput = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,9 +26,10 @@ function CollaboratorForm({ setCollaboratorName }) {
     width: 500px;
     padding: 1.5em;
     background: black;
-    border-radius: 0.5em;`
+    border-radius: 0.5em;
+  `;
 
-    const InputName = styled.input`
+  const InputName = styled.input`
     margin: 1em 0;
     font-size: 30px;
     padding-top: 10px;
@@ -44,9 +43,9 @@ function CollaboratorForm({ setCollaboratorName }) {
     &:focus {
       border: 1px solid red;
     }
-    `;
-    
-    const SubmitName = styled.input`
+  `;
+
+  const SubmitName = styled.input`
     line-height: 1.5em;
     background: darkgray;
     border: none;
@@ -57,37 +56,32 @@ function CollaboratorForm({ setCollaboratorName }) {
     cursor: pointer;
     border-radius: 0.25rem;
     text-align: center;
-    width: 50%;`;
+    width: 50%;
+  `;
 
-    function handleSubmit(event) {
-      event.preventDefault();
-      setCollaboratorName(event.target.elements.name.value);
-    }
-  
-    return (
-        <CollaboratorForm>
-          <FormInput onSubmit={handleSubmit}>
-            <Header>Collaborator name</Header>
-            <label name="name" aria-label="Write Your Name">
-            <InputName
+  function handleSubmit(event) {
+    event.preventDefault();
+    setCollaboratorName(event.target.elements.name.value);
+    setOpenedForm(false);
+  }
+
+  return (
+    <CollaboratorForm>
+      <FormInput onSubmit={handleSubmit}>
+        <Header>Collaborator name</Header>
+        <label name="name" aria-label="Write Your Name">
+          <InputName
             aria-label="Get Collaborator Name"
-              id="my_name"
-              name="name"
-              type="text"
-              placeholder="Enter colaborator name"
-            />
-            </label>
-          <SubmitName
-            type="submit"
-            value="submit"
+            id="my_name"
+            name="name"
+            type="text"
+            placeholder="Enter colaborator name"
           />
-          </FormInput>
-        </CollaboratorForm>
-          
-      );
+        </label>
+        <SubmitName type="submit" value="submit" />
+      </FormInput>
+    </CollaboratorForm>
+  );
 }
-
-  
- 
 
 export default CollaboratorForm;
