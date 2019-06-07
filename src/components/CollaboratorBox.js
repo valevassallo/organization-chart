@@ -3,10 +3,10 @@ import styled from "@emotion/styled";
 
 import CollaboratorForm from "./CollaboratorForm";
 
-function CollaboratorBox({ collaborator, getChilds, addChild }) {
+function CollaboratorBox({ collaborator, getChildren, addChild }) {
   const [openedForm, setOpenedForm] = React.useState(false);
 
-  const childs = getChilds(collaborator.id);
+  const children = getChildren(collaborator.id);
 
   function addNewChild(collabName) {
     addChild({ id: Date.now(), name: collabName, parentId: collaborator.id });
@@ -74,12 +74,12 @@ function CollaboratorBox({ collaborator, getChilds, addChild }) {
         </Box>
       </Container>
       <StyledUl>
-        {childs.map(collaborator => {
+        {children.map(collaborator => {
           return (
             <li key={collaborator.id}>
               <CollaboratorBox
                 collaborator={collaborator}
-                getChilds={getChilds}
+                getChildren={getChildren}
                 addChild={addChild}
               />
             </li>
