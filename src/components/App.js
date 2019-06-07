@@ -5,7 +5,6 @@ import Main from "./Main";
 
 function App() {
   const [companyName, setCompanyName] = React.useState("");
-
   const [ceoName, setCeoName] = React.useState("");
 
   if (companyName && ceoName) {

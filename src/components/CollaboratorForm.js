@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-function CollaboratorForm({ setCollaboratorName, setOpenedForm }) {
+function CollaboratorForm({ addNewChild, setOpenedForm }) {
   const CollaboratorForm = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
   `;
 
   const Header = styled.h1`
@@ -61,7 +60,7 @@ function CollaboratorForm({ setCollaboratorName, setOpenedForm }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    setCollaboratorName(event.target.elements.name.value);
+    addNewChild(event.target.elements.name.value);
     setOpenedForm(false);
   }
 
