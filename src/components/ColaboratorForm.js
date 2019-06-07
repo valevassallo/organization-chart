@@ -68,9 +68,9 @@ function CollaboratorForm({ setCollaboratorName }) {
         <CollaboratorForm>
           <FormInput onSubmit={handleSubmit}>
             <Header>Collaborator name</Header>
-            <label name="name" aria-label="write your name">
+            <label name="name" aria-label="Write Your Name">
             <InputName
-            aria-label=""
+            aria-label="Get Collaborator Name"
               id="my_name"
               name="name"
               type="text"
