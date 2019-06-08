@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from "react";
-import styled from "@emotion/styled";
+import { jsx } from "@emotion/core";
 
 import CollaboratorForm from "./CollaboratorForm";
 
@@ -12,54 +13,54 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     addChild({ id: Date.now(), name: collabName, parentId: collaborator.id });
   }
 
-  const Container = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-  `;
+  const container = {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: "30px"
+  };
 
-  const Box = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 60px;
-    padding: 1.5em;
-    background: black;
-    border-radius: 0.5em;
-  `;
+  const box = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "250px",
+    height: "60px",
+    padding: "1.5em",
+    background: "black",
+    borderRadius: "0.5em"
+  };
 
-  const ColaboratorName = styled.p`
-    font-size: 2em;
-    color: white;
-    text-decoration: none;
-  `;
+  const collaboratorName = {
+    fontFamily: "sans-serif",
+    fontSize: "2em",
+    color: "white",
+    textDecoration: "none"
+  };
 
-  const AddButton = styled.div`
-    border: 2px solid darkgray;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-    z-index: 1;
-    &:hover {
-      color: red;
-      border-color: red;
+  const addButton = {
+    border: "2px solid darkgray",
+    borderRadius: "50%",
+    width: "50px",
+    height: "50px",
+    fontSize: "50px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "gray",
+    color: "white",
+    textDecoration: "none",
+    zIndex: "1",
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "#484848"
     }
-  `;
+  };
 
-  const StyledUl = styled.ul`
-    list-style: none;
-  `;
+  const styledUl = {
+    listStyle: "none"
+  };
 
   function handleClick() {
     setOpenedForm(true);
@@ -67,13 +68,15 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
 
   return (
     <>
-      <Container>
-        <Box>
-          <ColaboratorName>{collaborator.name}</ColaboratorName>
-          <AddButton onClick={handleClick}>+</AddButton>
-        </Box>
-      </Container>
-      <StyledUl>
+      <div css={container}>
+        <div css={box}>
+          <p css={collaboratorName}>{collaborator.name}</p>
+          <div onClick={handleClick} css={addButton}>
+            +
+          </div>
+        </div>
+      </div>
+      <ul css={styledUl}>
         {children.map(collaborator => {
           return (
             <li key={collaborator.id}>
@@ -85,7 +88,7 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
             </li>
           );
         })}
-      </StyledUl>
+      </ul>
       {openedForm && (
         <CollaboratorForm
           addNewChild={addNewChild}

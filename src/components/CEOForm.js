@@ -1,62 +1,66 @@
+/** @jsx jsx */
 import React from "react";
-import styled from "@emotion/styled";
+import { jsx } from "@emotion/core";
 
 function CEOForm({ setCeoName }) {
-  const FormContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-  `;
+  const formContainer = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "100vh"
+  };
 
-  const Header = styled.h1`
-    text-align: center;
-    margin: 15px;
-    font-size: 40px;
-    color: white;
-    font-weight: bolder;
-  `;
+  const header = {
+    textAlign: "center",
+    margin: "15px",
+    fontSize: "40px",
+    color: "white",
+    fontWeight: "bolder"
+  };
 
-  const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    padding: 1.5em;
-    background: black;
-    border-radius: 0.5em;
-  `;
-  const InputCEOName = styled.input`
-    margin: 1em 0;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    width: 100%;
-    text-align: center;
-    &:focus {
-      border: 1px solid red;
+  const styledForm = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "500px",
+    padding: "1.5em",
+    background: "black",
+    borderRadius: "0.5em"
+  };
+  const inputCEOName = {
+    margin: "1em 0",
+    fontSize: "30px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
+    borderRadius: "4px",
+    outline: "none",
+    border: "none",
+    borderBottom: "1px solid #ddd",
+    width: "100%",
+    textAlign: "center",
+    "&:focus": {
+      border: "1px solid red"
     }
-  `;
+  };
 
-  const Submit = styled.input`
-    line-height: 1.5em;
-    background: darkgray;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0.5em;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    text-align: center;
-    width: 50%;
-  `;
+  const styledSubmit = {
+    lineHeight: "1.5em",
+    background: "darkgray",
+    border: "none",
+    color: "white",
+    fontSize: "20px",
+    fontWeight: "bold",
+    padding: "0.5em",
+    cursor: "pointer",
+    borderRadius: "0.25rem",
+    textAlign: "center",
+    width: "50%",
+    "&:hover": {
+      backgroundColor: "#484848"
+    }
+  };
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -64,11 +68,11 @@ function CEOForm({ setCeoName }) {
   }
 
   return (
-    <FormContainer>
-      <Form onSubmit={handleSubmit}>
-        <Header>CEO's name</Header>
+    <div css={formContainer}>
+      <form onSubmit={handleSubmit} css={styledForm}>
+        <h1 css={header}>CEO's name</h1>
         <label name="ceo">
-          <InputCEOName
+          <input
             type="text"
             required
             placeholder="Enter CEO's name"
@@ -76,11 +80,12 @@ function CEOForm({ setCeoName }) {
             id="ceo"
             aria-label="Input to get CEO's name"
             autoComplete="off"
+            css={inputCEOName}
           />
         </label>
-        <Submit type="submit" value="Next" />
-      </Form>
-    </FormContainer>
+        <input type="submit" value="Next" css={styledSubmit} />
+      </form>
+    </div>
   );
 }
 

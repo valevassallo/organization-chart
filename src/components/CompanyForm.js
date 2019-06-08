@@ -41,7 +41,7 @@ function CompanyForm({ setCompanyName }) {
     borderBottom: "1px solid #ddd",
     width: "100%",
     textAlign: "center",
-    '&:focus': {
+    "&:focus": {
       border: "1px solid red"
     }
   };
@@ -57,7 +57,10 @@ function CompanyForm({ setCompanyName }) {
     cursor: "pointer",
     borderRadius: "0.25rem",
     textAlign: "center",
-    width: "50%"
+    width: "50%",
+    "&:hover": {
+      backgroundColor: "#484848"
+    }
   };
 
   const [content, setCont] = React.useState("");
@@ -87,7 +90,9 @@ function CompanyForm({ setCompanyName }) {
           autoFocus
           autoComplete="off"
         />
-        <button css={submitButton} type="submit">Next</button>
+        <button css={submitButton} type="submit">
+          Next
+        </button>
       </form>
     </div>
   );

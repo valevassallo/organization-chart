@@ -1,62 +1,81 @@
+/** @jsx jsx */
 import React from "react";
-import styled from "@emotion/styled";
+import { jsx } from "@emotion/core";
 
 function CollaboratorForm({ addNewChild, setOpenedForm }) {
-  const CollaboratorForm = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  `;
+  const collaboratorForm = {
+    display: "flex",
+    alignItems: "center",
+    position: "fixed",
+    zIndex: "1",
+    left: "0",
+    top: "0",
+    width: "100%",
+    height: "100%",
+    overflow: "auto",
+    backgroundColor: "rgba(0, 0, 0, 0.4)"
+  };
 
-  const Header = styled.h1`
-    text-align: center;
-    margin: 15px;
-    font-size: 40px;
-    color: white;
-    font-weight: bolder;
-  `;
+  const header = {
+    textAlign: "center",
+    margin: "15px",
+    fontSize: "40px",
+    color: "white",
+    fontWeight: "bolder"
+  };
 
-  const FormInput = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    padding: 1.5em;
-    background: black;
-    border-radius: 0.5em;
-  `;
+  const formInput = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "500px",
+    padding: "1.5em",
+    background: "black",
+    borderRadius: "0.5em",
+    margin: "0 auto"
+  };
 
-  const InputName = styled.input`
-    margin: 1em 0;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    width: 100%;
-    text-align: center;
-    &:focus {
-      border: 1px solid red;
+  const inputName = {
+    margin: "1em 0",
+    fontSize: "30px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
+    borderRadius: "4px",
+    outline: "none",
+    border: "none",
+    borderBottom: "1px solid #ddd",
+    width: "100%",
+    textAlign: "center",
+    "&:focus": {
+      border: "1px solid red"
     }
-  `;
+  };
 
-  const SubmitName = styled.input`
-    line-height: 1.5em;
-    background: darkgray;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0.5em;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    text-align: center;
-    width: 50%;
-  `;
+  const submitName = {
+    lineHeight: "1.5em",
+    background: "darkgray",
+    border: "none",
+    color: "white",
+    fontSize: "20px",
+    fontWeight: "bold",
+    padding: "0.5em",
+    borderRadius: "0.25rem",
+    textAlign: "center",
+    width: "50%",
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "#484848"
+    }
+  };
+
+  const cancel = {
+    fontSize: "2em",
+    cursor: "pointer",
+    color: "white",
+    textAlign: "right",
+    width: "100%"
+  };
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -64,22 +83,30 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     setOpenedForm(false);
   }
 
+  function handleCancel(event) {
+    setOpenedForm(false);
+  }
+
   return (
-    <CollaboratorForm>
-      <FormInput onSubmit={handleSubmit}>
-        <Header>Collaborator name</Header>
+    <div css={collaboratorForm}>
+      <form onSubmit={handleSubmit} css={formInput}>
+        <span onClick={handleCancel} css={cancel}>
+          &times;
+        </span>
+        <h1 css={header}>Collaborator name</h1>
         <label name="name" aria-label="Write Your Name">
-          <InputName
+          <input
             aria-label="Get Collaborator Name"
             id="my_name"
             name="name"
             type="text"
             placeholder="Enter colaborator name"
+            css={inputName}
           />
         </label>
-        <SubmitName type="submit" value="submit" />
-      </FormInput>
-    </CollaboratorForm>
+        <input type="submit" value="submit" css={submitName} />
+      </form>
+    </div>
   );
 }
 
