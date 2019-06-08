@@ -15,8 +15,6 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
 
   const container = {
     width: "100%",
-    display: "flex",
-    justifyContent: "center",
     marginBottom: "30px"
   };
 
@@ -29,7 +27,18 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     height: "60px",
     padding: "1.5em",
     background: "black",
-    borderRadius: "0.5em"
+    borderRadius: "0.5em",
+    position: "relative",
+    "&:before": {
+      content: '""',
+      borderBottom: "solid 3px black",
+      borderLeft: "solid 3px black",
+      position: "absolute",
+      top: "-30px",
+      width: "49px",
+      height: "80px",
+      left: "-49px"
+    }
   };
 
   const collaboratorName = {
@@ -59,7 +68,23 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
   };
 
   const styledUl = {
-    listStyle: "none"
+    listStyle: "none",
+    paddingLeft: "120px",
+    display: "flex",
+    flexDirection: "column"
+  };
+
+  const styledLi = {
+    position: "relative",
+    "&:after": {
+      content: '""',
+      top: "108px",
+      bottom: "85px",
+      left: "71px",
+      width: "3px",
+      backgroundColor: "black",
+      position: "absolute"
+    }
   };
 
   function handleClick() {
@@ -79,7 +104,7 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
       <ul css={styledUl}>
         {children.map(collaborator => {
           return (
-            <li key={collaborator.id}>
+            <li key={collaborator.id} css={styledLi}>
               <CollaboratorBox
                 collaborator={collaborator}
                 getChildren={getChildren}
