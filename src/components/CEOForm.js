@@ -56,6 +56,9 @@ function CEOForm({ setCeoName }) {
     border-radius: 0.25rem;
     text-align: center;
     width: 50%;
+    &:hover {
+      background-color: #484848;
+    }
   `;
 
   function handleSubmit(event) {

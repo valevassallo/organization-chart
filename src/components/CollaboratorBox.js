@@ -32,6 +32,7 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
   `;
 
   const ColaboratorName = styled.p`
+    font-family: sans-serif;
     font-size: 2em;
     color: white;
     text-decoration: none;
@@ -51,9 +52,9 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     cursor: pointer;
     text-decoration: none;
     z-index: 1;
+    cursor: pointer;
     &:hover {
-      color: red;
-      border-color: red;
+      background-color: #484848;
     }
   `;
 

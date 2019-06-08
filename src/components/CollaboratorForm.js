@@ -5,8 +5,14 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
   const CollaboratorForm = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
   `;
 
   const Header = styled.h1`
@@ -26,6 +32,7 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     padding: 1.5em;
     background: black;
     border-radius: 0.5em;
+    margin: 0 auto;
   `;
 
   const InputName = styled.input`
@@ -52,10 +59,21 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     font-size: 20px;
     font-weight: bold;
     padding: 0.5em;
-    cursor: pointer;
     border-radius: 0.25rem;
     text-align: center;
     width: 50%;
+    cursor: pointer;
+    &:hover {
+      background-color: #484848;
+    }
+  `;
+
+  const Cancel = styled.span`
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+    width: 100%;
   `;
 
   function handleSubmit(event) {
@@ -64,9 +82,14 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     setOpenedForm(false);
   }
 
+  function handleCancel(event) {
+    setOpenedForm(false);
+  }
+
   return (
     <CollaboratorForm>
       <FormInput onSubmit={handleSubmit}>
+        <Cancel onClick={handleCancel}>&times;</Cancel>
         <Header>Collaborator name</Header>
         <label name="name" aria-label="Write Your Name">
           <InputName
