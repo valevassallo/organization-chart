@@ -3,6 +3,8 @@ import React from "react";
 import { jsx } from "@emotion/core";
 
 function CollaboratorForm({ addNewChild, setOpenedForm }) {
+  const [CollabName, setCollabName] = React.useState("");
+
   const collaboratorForm = {
     display: "flex",
     alignItems: "center",
@@ -79,12 +81,16 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    addNewChild(event.target.elements.name.value);
+    addNewChild(CollabName);
     setOpenedForm(false);
   }
 
   function handleCancel(event) {
     setOpenedForm(false);
+  }
+
+  function handleChange(event) {
+    setCollabName(event.target.value);
   }
 
   return (
@@ -102,6 +108,7 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
             type="text"
             placeholder="Enter colaborator name"
             css={inputName}
+            onChange={handleChange}
           />
         </label>
         <input type="submit" value="submit" css={submitName} />

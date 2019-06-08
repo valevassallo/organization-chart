@@ -91,6 +91,10 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     setOpenedForm(true);
   }
 
+  function handleOpenedForm(value) {
+    setOpenedForm(value);
+  }
+
   return (
     <>
       <div css={container}>
@@ -117,7 +121,7 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
       {openedForm && (
         <CollaboratorForm
           addNewChild={addNewChild}
-          setOpenedForm={setOpenedForm}
+          setOpenedForm={handleOpenedForm}
         />
       )}
     </>
