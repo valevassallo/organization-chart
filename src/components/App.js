@@ -7,12 +7,16 @@ function App() {
   const [companyName, setCompanyName] = React.useState("");
   const [ceoName, setCeoName] = React.useState("");
 
+  function handleCompanyName(value) {
+    setCompanyName(value);
+  }
+
   if (companyName && ceoName) {
     return <Main companyName={companyName} ceoName={ceoName} />;
   } else if (companyName) {
     return <CEOForm setCeoName={setCeoName} />;
   } else {
-    return <CompanyForm setCompanyName={setCompanyName} />;
+    return <CompanyForm setCompanyName={handleCompanyName} />;
   }
 }
 
