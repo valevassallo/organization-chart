@@ -1,14 +1,29 @@
+/** @jsx jsx */
 import React from "react";
 import ColaboratorBox from "./CollaboratorBox";
-import styled from "@emotion/styled";
+import { jsx } from "@emotion/core";
 
-const Title = styled.h1`
-  text-align: center;
-  margin: 15px;
-  font-size: 40px;
-  color: black;
-  font-weight: bolder;
-`;
+const title = {
+  textAlign: "center",
+  margin: "15px",
+  fontSize: "40px",
+  color: "black",
+  fontWeight: "bolder"
+};
+
+const styledLi = {
+  listStyle: "none",
+  position: "relative",
+  "&:after": {
+    content: '""',
+    top: "126px",
+    bottom: "85px",
+    left: "71px",
+    width: "3px",
+    backgroundColor: "black",
+    position: "absolute"
+  }
+};
 
 function Main({ companyName, ceoName }) {
   const [tree, setTree] = React.useState([
@@ -25,12 +40,14 @@ function Main({ companyName, ceoName }) {
 
   return (
     <>
-      <Title>{companyName}</Title>
-      <ColaboratorBox
-        collaborator={tree[0]}
-        getChildren={getChildren}
-        addChild={addChild}
-      />
+      <h1 css={title}>{companyName}</h1>
+      <li css={styledLi}>
+        <ColaboratorBox
+          collaborator={tree[0]}
+          getChildren={getChildren}
+          addChild={addChild}
+        />
+      </li>
     </>
   );
 }
