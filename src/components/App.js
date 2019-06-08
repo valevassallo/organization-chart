@@ -4,8 +4,8 @@ import CEOForm from "./CEOForm";
 import Main from "./Main";
 
 function App() {
-  const [companyName, setCompanyName] = React.useState("Codeable");
-  const [ceoName, setCeoName] = React.useState("CEO");
+  const [companyName, setCompanyName] = React.useState("");
+  const [ceoName, setCeoName] = React.useState("");
 
   function handleCompanyName(value) {
     setCompanyName(value);
