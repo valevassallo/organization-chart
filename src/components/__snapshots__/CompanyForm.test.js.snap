@@ -80,6 +80,10 @@ exports[`CompanyForm functionality 1`] = `
   width: 50%;
 }
 
+.emotion-2:hover {
+  background-color: #484848;
+}
+
 <div
     class="emotion-4"
   >

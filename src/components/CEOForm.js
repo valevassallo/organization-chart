@@ -45,7 +45,7 @@ function CEOForm({ setCeoName }) {
     }
   };
 
-  const styledSubmit = {
+  const submitButton = {
     lineHeight: "1.5em",
     background: "darkgray",
     border: "none",
@@ -62,28 +62,36 @@ function CEOForm({ setCeoName }) {
     }
   };
 
+  const [content, setContent] = React.useState("");
+
   function handleSubmit(event) {
     event.preventDefault();
-    setCeoName(event.target.elements.ceo.value);
+    setCeoName(content);
+  }
+
+  function handleChange(event) {
+    setContent(event.target.value);
   }
 
   return (
     <div css={formContainer}>
       <form onSubmit={handleSubmit} css={styledForm}>
         <h1 css={header}>CEO's name</h1>
-        <label name="ceo">
-          <input
-            type="text"
-            required
-            placeholder="Enter CEO's name"
-            name="ceo"
-            id="ceo"
-            aria-label="Input to get CEO's name"
-            autoComplete="off"
-            css={inputCEOName}
-          />
-        </label>
-        <input type="submit" value="Next" css={styledSubmit} />
+        <input
+          type="text"
+          required
+          placeholder="Enter CEO's name"
+          name="ceo"
+          id="ceo"
+          onChange={handleChange}
+          autoFocus
+          aria-label="Input to get CEO's name"
+          autoComplete="off"
+          css={inputCEOName}
+        />
+        <button css={submitButton} type="submit">
+          Next
+        </button>
       </form>
     </div>
   );
