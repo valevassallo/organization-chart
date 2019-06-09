@@ -15,7 +15,7 @@ function App() {
   }
 
   if (companyName && ceoName) {
-    return <Main companyName={companyName} ceoName={ceoName} />;
+    return <Main companyName={companyName} ceoName= {ceoName}/>;
   } else if (companyName) {
     return <CEOForm setCeoName={handleCeoName} />;
   } else {

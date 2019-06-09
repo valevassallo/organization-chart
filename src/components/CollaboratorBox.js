@@ -23,29 +23,37 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    width: "250px",
-    height: "60px",
+    width: "15%",
+    height: "5vh",
     padding: "1.5em",
     background: "black",
     borderRadius: "0.5em",
     position: "relative",
+    fontSize: "0.7em",
     "&:before": {
       content: '""',
       borderBottom: "solid 3px black",
       borderLeft: "solid 3px black",
       position: "absolute",
       top: "-30px",
-      width: "49px",
-      height: "80px",
-      left: "-49px"
-    }
+      width: "60px",
+      height: "63px",
+      left: "-63px"
+    },
+    "@media (max-width: 960px)": {
+      fontSize: "8px",
+      width: "90px"
+    },
   };
 
   const collaboratorName = {
     fontFamily: "sans-serif",
     fontSize: "2em",
     color: "white",
-    textDecoration: "none"
+    textDecoration: "none",
+    "@media (max-width: 960px)": {
+      marginTop: "-10px"
+    },
   };
 
   const addButton = {
@@ -64,6 +72,13 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     cursor: "pointer",
     "&:hover": {
       backgroundColor: "#484848"
+    },
+    "@media (max-width: 960px)": {
+      fontSize: "14px",
+      width: "20px",
+      height: "25px",
+      top: "44px",
+      position: "absolute"
     }
   };
 
@@ -78,9 +93,9 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     position: "relative",
     "&:after": {
       content: '""',
-      top: "108px",
+      top: "130px",
       bottom: "85px",
-      left: "71px",
+      left: "57.5px",
       width: "3px",
       backgroundColor: "black",
       position: "absolute"
