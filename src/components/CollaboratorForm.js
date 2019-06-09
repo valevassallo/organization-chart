@@ -64,7 +64,7 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     width: "100%",
     textAlign: "center",
     "&:focus": {
-      border: "1px solid red",
+      border: "1px solid red"
     },
     "@media (max-width: 960px)": {
       fontSize: "12px",
@@ -74,7 +74,7 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
 
   const submitName = {
     lineHeight: "1.5em",
-    background: "darkgray",
+    background: "#757575",
     border: "none",
     color: "white",
     fontSize: "20px",

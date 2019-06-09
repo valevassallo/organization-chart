@@ -43,7 +43,7 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     "@media (max-width: 960px)": {
       fontSize: "8px",
       width: "90px"
-    },
+    }
   };
 
   const collaboratorName = {
@@ -51,9 +51,11 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     fontSize: "2em",
     color: "white",
     textDecoration: "none",
+    marginTop: "30px",
+    marginBottom: "8px",
     "@media (max-width: 960px)": {
       marginTop: "-10px"
-    },
+    }
   };
 
   const addButton = {
