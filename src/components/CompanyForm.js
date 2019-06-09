@@ -8,7 +8,11 @@ function CompanyForm({ setCompanyName }) {
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    height: "100vh"
+    height: "100vh",
+    "@media (max-width: 960px)": {
+      width: "70%",
+      marginLeft: "15%"
+    }
   };
 
   const styledForm = {
@@ -19,7 +23,11 @@ function CompanyForm({ setCompanyName }) {
     width: "500px",
     padding: "1.5em",
     background: "black",
-    borderRadius: "0.5em"
+    borderRadius: "0.5em",
+    "@media (max-width: 960px)": {
+      height: "120px",
+      fontSize: "14px"
+    }
   };
 
   const styledHeader = {
@@ -27,7 +35,13 @@ function CompanyForm({ setCompanyName }) {
     margin: "15px",
     fontSize: "40px",
     color: "white",
-    fontWeight: "bolder"
+    fontWeight: "bolder",
+    "@media (max-width: 960px)": {
+      height: "50px",
+      fontSize: "30px",
+      marginBottom: "5px",
+      marginTop: "0px"
+    }
   };
 
   const inputCompanyName = {
@@ -43,6 +57,10 @@ function CompanyForm({ setCompanyName }) {
     textAlign: "center",
     "&:focus": {
       border: "1px solid red"
+    },
+    "@media (max-width: 960px)": {
+      fontSize: "12px",
+      width: "250px"
     }
   };
 
@@ -60,6 +78,13 @@ function CompanyForm({ setCompanyName }) {
     width: "50%",
     "&:hover": {
       backgroundColor: "#484848"
+    },
+    "@media (max-width: 960px)": {
+      fontSize: "12px",
+      margin: "0.5em",
+      width: "30%",
+      marginTop: "-5px",
+      padding: "0.2em"
     }
   };
 

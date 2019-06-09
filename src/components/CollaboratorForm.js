@@ -13,7 +13,11 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     width: "100%",
     height: "100%",
     overflow: "auto",
-    backgroundColor: "rgba(0, 0, 0, 0.4)"
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
+    "@media (max-width: 960px)": {
+      width: "70%",
+      marginLeft: "15%"
+    }
   };
 
   const header = {
@@ -21,7 +25,13 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     margin: "15px",
     fontSize: "40px",
     color: "white",
-    fontWeight: "bolder"
+    fontWeight: "bolder",
+    "@media (max-width: 960px)": {
+      height: "50px",
+      fontSize: "30px",
+      marginBottom: "5px",
+      marginTop: "0px"
+    }
   };
 
   const formInput = {
@@ -33,7 +43,11 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     padding: "1.5em",
     background: "black",
     borderRadius: "0.5em",
-    margin: "0 auto"
+    margin: "0 auto",
+    "@media (max-width: 960px)": {
+      height: "120px",
+      fontSize: "14px"
+    }
   };
 
   const inputName = {
@@ -48,7 +62,11 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     width: "100%",
     textAlign: "center",
     "&:focus": {
-      border: "1px solid red"
+      border: "1px solid red",
+    },
+    "@media (max-width: 960px)": {
+      fontSize: "12px",
+      width: "250px"
     }
   };
 
@@ -66,6 +84,13 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     cursor: "pointer",
     "&:hover": {
       backgroundColor: "#484848"
+    },
+    "@media (max-width: 960px)": {
+      fontSize: "12px",
+      margin: "0.5em",
+      width: "30%",
+      marginTop: "-5px",
+      padding: "0.2em"
     }
   };
 
@@ -74,7 +99,10 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
     cursor: "pointer",
     color: "white",
     textAlign: "right",
-    width: "100%"
+    width: "100%",
+    "@media (max-width: 960px)": {
+      marginTop: "15px"
+    }
   };
 
   function handleSubmit(event) {

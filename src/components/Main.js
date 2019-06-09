@@ -3,6 +3,7 @@ import React from "react";
 import ColaboratorBox from "./CollaboratorBox";
 import { jsx } from "@emotion/core";
 
+
 const title = {
   textAlign: "center",
   margin: "15px",
@@ -16,9 +17,9 @@ const styledLi = {
   position: "relative",
   "&:after": {
     content: '""',
-    top: "126px",
+    top: "130px",
     bottom: "85px",
-    left: "71px",
+    left: "57.5px",
     width: "3px",
     backgroundColor: "black",
     position: "absolute"
@@ -41,13 +42,15 @@ function Main({ companyName, ceoName }) {
   return (
     <>
       <h1 css={title}>{companyName}</h1>
-      <li css={styledLi}>
-        <ColaboratorBox
-          collaborator={tree[0]}
-          getChildren={getChildren}
-          addChild={addChild}
-        />
-      </li>
+      <ul>
+        <li css={styledLi}>
+          <ColaboratorBox
+            collaborator={tree[0]}
+            getChildren={getChildren}
+            addChild={addChild}
+          />
+        </li>
+      </ul>
     </>
   );
 }
