@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should create a company's name and ceo's name 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  text-align: center;
+  margin: 15px;
+  font-size: 40px;
+  color: black;
+  font-weight: bolder;
+}
+
+<h1
+    class="emotion-0"
+  >
+    Able
+  </h1>
+  .emotion-5 {
+  list-style: none;
+  position: relative;
+}
+
+.emotion-5:after {
+  content: "";
+  top: 130px;
+  bottom: 85px;
+  left: 57.5px;
+  width: 3px;
+  background-color: black;
+  position: absolute;
+}
+
+.emotion-3 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  height: 5vh;
+  padding: 1.5em;
+  background: black;
+  border-radius: 0.5em;
+  position: relative;
+  font-size: 0.7em;
+}
+
+.emotion-2:before {
+  content: "";
+  border-bottom: solid 3px black;
+  border-left: solid 3px black;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+  height: 63px;
+  left: -63px;
+}
+
+@media (max-width:960px) {
+  .emotion-2 {
+    font-size: 8px;
+    width: 90px;
+  }
+}
+
+.emotion-0 {
+  font-family: sans-serif;
+  font-size: 2em;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (max-width:960px) {
+  .emotion-0 {
+    margin-top: -10px;
+  }
+}
+
+.emotion-1 {
+  border: 2px solid darkgray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: gray;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.emotion-1:hover {
+  background-color: #484848;
+}
+
+@media (max-width:960px) {
+  .emotion-1 {
+    font-size: 14px;
+    width: 20px;
+    height: 25px;
+    top: 44px;
+    position: absolute;
+  }
+}
+
+.emotion-4 {
+  list-style: none;
+  padding-left: 120px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<ul>
+    <li
+      class="emotion-5"
+    >
+      <div
+        class="emotion-3"
+      >
+        <div
+          class="emotion-2"
+        >
+          <p
+            class="emotion-0"
+          >
+            Marieth
+          </p>
+          <div
+            class="emotion-1"
+          >
+            +
+          </div>
+        </div>
+      </div>
+      <ul
+        class="emotion-4"
+      />
+    </li>
+  </ul>
+</DocumentFragment>
+`;
