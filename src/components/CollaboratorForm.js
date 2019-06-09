@@ -96,7 +96,11 @@ function CollaboratorForm({ addNewChild, setOpenedForm }) {
   return (
     <div css={collaboratorForm}>
       <form onSubmit={handleSubmit} css={formInput}>
-        <span onClick={handleCancel} css={cancel}>
+        <span
+          onClick={handleCancel}
+          css={cancel}
+          aria-label="Close create collaborator"
+        >
           &times;
         </span>
         <h1 css={header}>Collaborator name</h1>

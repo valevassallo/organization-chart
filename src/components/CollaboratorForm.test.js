@@ -32,3 +32,16 @@ test("CreateCollaborator", async () => {
 
   expect(addNewChild).toHaveBeenCalledWith("ColaboratorJuan");
 });
+
+test("CreateCollaborator UI", async () => {
+  const addNewChild = jest.fn();
+  const setOpenedForm = jest.fn();
+  const { getByLabelText, asFragment } = render(
+    <CollaboratorForm addNewChild={addNewChild} setOpenedForm={setOpenedForm} />
+  );
+
+  expect(asFragment()).toMatchSnapshot();
+
+  fireEvent.click(getByLabelText("Close create collaborator"));
+  expect(asFragment()).toMatchSnapshot();
+});
