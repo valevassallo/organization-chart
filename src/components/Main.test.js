@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 
 import Main from "./Main";
 
-test("Main", () => {
+test("Main should create a company's name and ceo's name", () => {
   const companyName = "Able";
 
   const ceoName = "Marieth";
