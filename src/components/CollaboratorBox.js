@@ -117,7 +117,7 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
       <div css={container}>
         <div css={box}>
           <p css={collaboratorName}>{collaborator.name}</p>
-          <div onClick={handleClick} css={addButton}>
+          <div onClick={handleClick} css={addButton} aria-label="Add Button">
             +
           </div>
         </div>
@@ -130,6 +130,7 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
                 collaborator={collaborator}
                 getChildren={getChildren}
                 addChild={addChild}
+                aria-label="Collaborator Name"
               />
             </li>
           );
