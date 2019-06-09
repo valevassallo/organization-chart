@@ -1,0 +1,360 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollaboratorBox UI 1`] = `
+<DocumentFragment>
+  .emotion-3 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 250px;
+  height: 60px;
+  padding: 1.5em;
+  background: black;
+  border-radius: 0.5em;
+  position: relative;
+}
+
+.emotion-2:before {
+  content: "";
+  border-bottom: solid 3px black;
+  border-left: solid 3px black;
+  position: absolute;
+  top: -30px;
+  width: 49px;
+  height: 80px;
+  left: -49px;
+}
+
+.emotion-0 {
+  font-family: sans-serif;
+  font-size: 2em;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1 {
+  border: 2px solid darkgray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: gray;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.emotion-1:hover {
+  background-color: #484848;
+}
+
+<div
+    class="emotion-3"
+  >
+    <div
+      class="emotion-2"
+    >
+      <p
+        class="emotion-0"
+      />
+      <div
+        aria-label="Add Button"
+        class="emotion-1"
+      >
+        +
+      </div>
+    </div>
+  </div>
+  .emotion-0 {
+  list-style: none;
+  padding-left: 120px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<ul
+    class="emotion-0"
+  />
+</DocumentFragment>
+`;
+
+exports[`CollaboratorBox UI 2`] = `
+<DocumentFragment>
+  .emotion-3 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 250px;
+  height: 60px;
+  padding: 1.5em;
+  background: black;
+  border-radius: 0.5em;
+  position: relative;
+}
+
+.emotion-2:before {
+  content: "";
+  border-bottom: solid 3px black;
+  border-left: solid 3px black;
+  position: absolute;
+  top: -30px;
+  width: 49px;
+  height: 80px;
+  left: -49px;
+}
+
+.emotion-0 {
+  font-family: sans-serif;
+  font-size: 2em;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1 {
+  border: 2px solid darkgray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: gray;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.emotion-1:hover {
+  background-color: #484848;
+}
+
+<div
+    class="emotion-3"
+  >
+    <div
+      class="emotion-2"
+    >
+      <p
+        class="emotion-0"
+      />
+      <div
+        aria-label="Add Button"
+        class="emotion-1"
+      >
+        +
+      </div>
+    </div>
+  </div>
+  .emotion-0 {
+  list-style: none;
+  padding-left: 120px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<ul
+    class="emotion-0"
+  />
+  .emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 500px;
+  padding: 1.5em;
+  background: black;
+  border-radius: 0.5em;
+  margin: 0 auto;
+}
+
+.emotion-0 {
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+  text-align: right;
+  width: 100%;
+}
+
+.emotion-1 {
+  text-align: center;
+  margin: 15px;
+  font-size: 40px;
+  color: white;
+  font-weight: bolder;
+}
+
+.emotion-2 {
+  margin: 1em 0;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  text-align: center;
+}
+
+.emotion-2:focus {
+  border: 1px solid red;
+}
+
+.emotion-3 {
+  line-height: 1.5em;
+  background: darkgray;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 0.25rem;
+  text-align: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+.emotion-3:hover {
+  background-color: #484848;
+}
+
+<div
+    class="emotion-5"
+  >
+    <form
+      class="emotion-4"
+    >
+      <span
+        class="emotion-0"
+      >
+        ×
+      </span>
+      <h1
+        class="emotion-1"
+      >
+        Collaborator name
+      </h1>
+      <label
+        aria-label="Write Your Name"
+        name="name"
+      >
+        <input
+          aria-label="Get Collaborator Name"
+          class="emotion-2"
+          id="my_name"
+          name="name"
+          placeholder="Enter colaborator name"
+          type="text"
+        />
+      </label>
+      <input
+        class="emotion-3"
+        type="submit"
+        value="submit"
+      />
+    </form>
+  </div>
+</DocumentFragment>
+`;

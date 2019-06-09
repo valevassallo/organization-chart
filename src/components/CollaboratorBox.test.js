@@ -6,7 +6,11 @@ import CollaboratorBox from "./CollaboratorBox";
 test("CollaboratorBox UI", () => {
   const collaborator = [{ id: 1, name: "Juan", parentId: null }];
 
-  // const getChildren = [{ id: 2, name: "pepe", parentId: 2 }];
+  const getChildren = id => {
+    return [{ id: 2, name: "Pepe", parentId: 1 }].filter(
+      collaborator => collaborator.parentId === id
+    );
+  };
 
   const addChild = jest.fn();
 
