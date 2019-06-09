@@ -66,7 +66,7 @@ function CompanyForm({ setCompanyName }) {
 
   const submitButton = {
     lineHeight: "1.5em",
-    background: "darkgray",
+    background: "#757575",
     border: "none",
     color: "white",
     fontSize: "20px",
