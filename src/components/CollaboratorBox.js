@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
+import { createPortal } from "react-dom";
 
 import CollaboratorForm from "./CollaboratorForm";
 
@@ -112,6 +113,8 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
     setOpenedForm(value);
   }
 
+  const $portal = React.useMemo(() => document.getElementById("portal"), []);
+
   return (
     <>
       <div css={container}>
@@ -135,12 +138,14 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
           );
         })}
       </ul>
-      {openedForm && (
-        <CollaboratorForm
-          addNewChild={addNewChild}
-          setOpenedForm={handleOpenedForm}
-        />
-      )}
+      {openedForm &&
+        createPortal(
+          <CollaboratorForm
+            addNewChild={addNewChild}
+            setOpenedForm={handleOpenedForm}
+          />,
+          $portal
+        )}
     </>
   );
 }
