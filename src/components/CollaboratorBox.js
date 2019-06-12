@@ -3,7 +3,8 @@ import React from "react";
 import { createPortal } from "react-dom";
 import { jsx } from "@emotion/core";
 
-import CollaboratorForm from "./CollaboratorForm";
+import Spinner from "./Spinner";
+const CollaboratorForm = React.lazy(() => import("./CollaboratorForm"));
 
 function CollaboratorBox({ collaborator, getChildren, addChild }) {
   const [openedForm, setOpenedForm] = React.useState(false);
@@ -139,14 +140,16 @@ function CollaboratorBox({ collaborator, getChildren, addChild }) {
           );
         })}
       </ul>
-      {openedForm &&
-        createPortal(
-          <CollaboratorForm
-            addNewChild={addNewChild}
-            setOpenedForm={handleOpenedForm}
-          />,
-          $portal
-        )}
+      <React.Suspense fallback={<Spinner />}>
+        {openedForm &&
+          createPortal(
+            <CollaboratorForm
+              addNewChild={addNewChild}
+              setOpenedForm={handleOpenedForm}
+            />,
+            $portal
+          )}
+      </React.Suspense>
     </>
   );
 }
